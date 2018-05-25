@@ -385,10 +385,10 @@ document.querySelector("#note125").onmousedown = function() { pushBtn(125,this) 
 document.querySelector("#note126").onmousedown = function() { pushBtn(126,this) };
 document.querySelector("#note127").onmousedown = function() { pushBtn(127,this) };
 
-function pushBtn(cc,t){
+function pushBtn(note,t){
   t.classList.add("active");
-  sendCC(cc, 127);
-  pressedBtn = cc;
+  outputs[0].send([0x90,note,0x7f]);
+  pressedBtn = note;
 }
 
 document.onmouseup = function() {
@@ -397,7 +397,7 @@ document.onmouseup = function() {
 
 function releaseBtn(){
   if(pressedBtn != -1 ){
-    sendCC(pressedBtn, 0);
+    outputs[0].send([0x80,pressedBtn,0x00]);
     document.querySelector(".active").classList.remove("active");
     pressedBtn = -1;
   }
