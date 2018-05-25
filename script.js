@@ -7,7 +7,7 @@ var chs = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
 var ch = 1;
 
 /////////////////////////////////////////////////////////////////////////////
-var main = document.querySelector('#main');
+var main = document.querySelector('#slider-box');
 var fragment = document.createDocumentFragment();
 for(var i=0; i < 128; i++ ){
   var container = document.createElement('div');
@@ -29,6 +29,12 @@ for(var i=0; i < 128; i++ ){
   slider.classList.add('slider');
   slider.id =('slider' + i);
   container.appendChild(slider);
+
+  var btn = document.createElement('div');
+  btn.classList.add('note-btn');
+  btn.id =('note' + i);
+  btn.innerHTML = i;
+  container.appendChild(btn);
 
   fragment.appendChild(container);
 }
@@ -246,3 +252,153 @@ function sliderMove(num){
   console.log(num + "/"+a);
 }
 
+/////////////////////////////////////////////////////////////////////////////
+//BTN
+var pressedBtn = -1;
+
+document.querySelector("#note0").onmousedown = function() { pushBtn(0,this) };
+document.querySelector("#note1").onmousedown = function() { pushBtn(1,this) };
+document.querySelector("#note2").onmousedown = function() { pushBtn(2,this) };
+document.querySelector("#note3").onmousedown = function() { pushBtn(3,this) };
+document.querySelector("#note4").onmousedown = function() { pushBtn(4,this) };
+document.querySelector("#note5").onmousedown = function() { pushBtn(5,this) };
+document.querySelector("#note6").onmousedown = function() { pushBtn(6,this) };
+document.querySelector("#note7").onmousedown = function() { pushBtn(7,this) };
+document.querySelector("#note8").onmousedown = function() { pushBtn(8,this) };
+document.querySelector("#note9").onmousedown = function() { pushBtn(9,this) };
+document.querySelector("#note10").onmousedown = function() { pushBtn(10,this) };
+document.querySelector("#note11").onmousedown = function() { pushBtn(11,this) };
+document.querySelector("#note12").onmousedown = function() { pushBtn(12,this) };
+document.querySelector("#note13").onmousedown = function() { pushBtn(13,this) };
+document.querySelector("#note14").onmousedown = function() { pushBtn(14,this) };
+document.querySelector("#note15").onmousedown = function() { pushBtn(15,this) };
+document.querySelector("#note16").onmousedown = function() { pushBtn(16,this) };
+document.querySelector("#note17").onmousedown = function() { pushBtn(17,this) };
+document.querySelector("#note18").onmousedown = function() { pushBtn(18,this) };
+document.querySelector("#note19").onmousedown = function() { pushBtn(19,this) };
+document.querySelector("#note20").onmousedown = function() { pushBtn(20,this) };
+document.querySelector("#note21").onmousedown = function() { pushBtn(21,this) };
+document.querySelector("#note22").onmousedown = function() { pushBtn(22,this) };
+document.querySelector("#note23").onmousedown = function() { pushBtn(23,this) };
+document.querySelector("#note24").onmousedown = function() { pushBtn(24,this) };
+document.querySelector("#note25").onmousedown = function() { pushBtn(25,this) };
+document.querySelector("#note26").onmousedown = function() { pushBtn(26,this) };
+document.querySelector("#note27").onmousedown = function() { pushBtn(27,this) };
+document.querySelector("#note28").onmousedown = function() { pushBtn(28,this) };
+document.querySelector("#note29").onmousedown = function() { pushBtn(29,this) };
+document.querySelector("#note30").onmousedown = function() { pushBtn(30,this) };
+document.querySelector("#note31").onmousedown = function() { pushBtn(31,this) };
+document.querySelector("#note32").onmousedown = function() { pushBtn(32,this) };
+document.querySelector("#note33").onmousedown = function() { pushBtn(33,this) };
+document.querySelector("#note34").onmousedown = function() { pushBtn(34,this) };
+document.querySelector("#note35").onmousedown = function() { pushBtn(35,this) };
+document.querySelector("#note36").onmousedown = function() { pushBtn(36,this) };
+document.querySelector("#note37").onmousedown = function() { pushBtn(37,this) };
+document.querySelector("#note38").onmousedown = function() { pushBtn(38,this) };
+document.querySelector("#note39").onmousedown = function() { pushBtn(39,this) };
+document.querySelector("#note40").onmousedown = function() { pushBtn(40,this) };
+document.querySelector("#note41").onmousedown = function() { pushBtn(41,this) };
+document.querySelector("#note42").onmousedown = function() { pushBtn(42,this) };
+document.querySelector("#note43").onmousedown = function() { pushBtn(43,this) };
+document.querySelector("#note44").onmousedown = function() { pushBtn(44,this) };
+document.querySelector("#note45").onmousedown = function() { pushBtn(45,this) };
+document.querySelector("#note46").onmousedown = function() { pushBtn(46,this) };
+document.querySelector("#note47").onmousedown = function() { pushBtn(47,this) };
+document.querySelector("#note48").onmousedown = function() { pushBtn(48,this) };
+document.querySelector("#note49").onmousedown = function() { pushBtn(49,this) };
+document.querySelector("#note50").onmousedown = function() { pushBtn(50,this) };
+document.querySelector("#note51").onmousedown = function() { pushBtn(51,this) };
+document.querySelector("#note52").onmousedown = function() { pushBtn(52,this) };
+document.querySelector("#note53").onmousedown = function() { pushBtn(53,this) };
+document.querySelector("#note54").onmousedown = function() { pushBtn(54,this) };
+document.querySelector("#note55").onmousedown = function() { pushBtn(55,this) };
+document.querySelector("#note56").onmousedown = function() { pushBtn(56,this) };
+document.querySelector("#note57").onmousedown = function() { pushBtn(57,this) };
+document.querySelector("#note58").onmousedown = function() { pushBtn(58,this) };
+document.querySelector("#note59").onmousedown = function() { pushBtn(59,this) };
+document.querySelector("#note60").onmousedown = function() { pushBtn(60,this) };
+document.querySelector("#note61").onmousedown = function() { pushBtn(61,this) };
+document.querySelector("#note62").onmousedown = function() { pushBtn(62,this) };
+document.querySelector("#note63").onmousedown = function() { pushBtn(63,this) };
+document.querySelector("#note64").onmousedown = function() { pushBtn(64,this) };
+document.querySelector("#note65").onmousedown = function() { pushBtn(65,this) };
+document.querySelector("#note66").onmousedown = function() { pushBtn(66,this) };
+document.querySelector("#note67").onmousedown = function() { pushBtn(67,this) };
+document.querySelector("#note68").onmousedown = function() { pushBtn(68,this) };
+document.querySelector("#note69").onmousedown = function() { pushBtn(69,this) };
+document.querySelector("#note70").onmousedown = function() { pushBtn(70,this) };
+document.querySelector("#note71").onmousedown = function() { pushBtn(71,this) };
+document.querySelector("#note72").onmousedown = function() { pushBtn(72,this) };
+document.querySelector("#note73").onmousedown = function() { pushBtn(73,this) };
+document.querySelector("#note74").onmousedown = function() { pushBtn(74,this) };
+document.querySelector("#note75").onmousedown = function() { pushBtn(75,this) };
+document.querySelector("#note76").onmousedown = function() { pushBtn(76,this) };
+document.querySelector("#note77").onmousedown = function() { pushBtn(77,this) };
+document.querySelector("#note78").onmousedown = function() { pushBtn(78,this) };
+document.querySelector("#note79").onmousedown = function() { pushBtn(79,this) };
+document.querySelector("#note80").onmousedown = function() { pushBtn(80,this) };
+document.querySelector("#note81").onmousedown = function() { pushBtn(81,this) };
+document.querySelector("#note82").onmousedown = function() { pushBtn(82,this) };
+document.querySelector("#note83").onmousedown = function() { pushBtn(83,this) };
+document.querySelector("#note84").onmousedown = function() { pushBtn(84,this) };
+document.querySelector("#note85").onmousedown = function() { pushBtn(85,this) };
+document.querySelector("#note86").onmousedown = function() { pushBtn(86,this) };
+document.querySelector("#note87").onmousedown = function() { pushBtn(87,this) };
+document.querySelector("#note88").onmousedown = function() { pushBtn(88,this) };
+document.querySelector("#note89").onmousedown = function() { pushBtn(89,this) };
+document.querySelector("#note90").onmousedown = function() { pushBtn(90,this) };
+document.querySelector("#note91").onmousedown = function() { pushBtn(91,this) };
+document.querySelector("#note92").onmousedown = function() { pushBtn(92,this) };
+document.querySelector("#note93").onmousedown = function() { pushBtn(93,this) };
+document.querySelector("#note94").onmousedown = function() { pushBtn(94,this) };
+document.querySelector("#note95").onmousedown = function() { pushBtn(95,this) };
+document.querySelector("#note96").onmousedown = function() { pushBtn(96,this) };
+document.querySelector("#note97").onmousedown = function() { pushBtn(97,this) };
+document.querySelector("#note98").onmousedown = function() { pushBtn(98,this) };
+document.querySelector("#note99").onmousedown = function() { pushBtn(99,this) };
+document.querySelector("#note100").onmousedown = function() { pushBtn(100,this) };
+document.querySelector("#note101").onmousedown = function() { pushBtn(101,this) };
+document.querySelector("#note102").onmousedown = function() { pushBtn(102,this) };
+document.querySelector("#note103").onmousedown = function() { pushBtn(103,this) };
+document.querySelector("#note104").onmousedown = function() { pushBtn(104,this) };
+document.querySelector("#note105").onmousedown = function() { pushBtn(105,this) };
+document.querySelector("#note106").onmousedown = function() { pushBtn(106,this) };
+document.querySelector("#note107").onmousedown = function() { pushBtn(107,this) };
+document.querySelector("#note108").onmousedown = function() { pushBtn(108,this) };
+document.querySelector("#note109").onmousedown = function() { pushBtn(109,this) };
+document.querySelector("#note110").onmousedown = function() { pushBtn(110,this) };
+document.querySelector("#note111").onmousedown = function() { pushBtn(111,this) };
+document.querySelector("#note112").onmousedown = function() { pushBtn(112,this) };
+document.querySelector("#note113").onmousedown = function() { pushBtn(113,this) };
+document.querySelector("#note114").onmousedown = function() { pushBtn(114,this) };
+document.querySelector("#note115").onmousedown = function() { pushBtn(115,this) };
+document.querySelector("#note116").onmousedown = function() { pushBtn(116,this) };
+document.querySelector("#note117").onmousedown = function() { pushBtn(117,this) };
+document.querySelector("#note118").onmousedown = function() { pushBtn(118,this) };
+document.querySelector("#note119").onmousedown = function() { pushBtn(119,this) };
+document.querySelector("#note120").onmousedown = function() { pushBtn(120,this) };
+document.querySelector("#note121").onmousedown = function() { pushBtn(121,this) };
+document.querySelector("#note122").onmousedown = function() { pushBtn(122,this) };
+document.querySelector("#note123").onmousedown = function() { pushBtn(123,this) };
+document.querySelector("#note124").onmousedown = function() { pushBtn(124,this) };
+document.querySelector("#note125").onmousedown = function() { pushBtn(125,this) };
+document.querySelector("#note126").onmousedown = function() { pushBtn(126,this) };
+document.querySelector("#note127").onmousedown = function() { pushBtn(127,this) };
+
+function pushBtn(cc,t){
+  t.classList.add("active");
+  sendCC(cc, 127);
+  pressedBtn = cc;
+}
+
+document.onmouseup = function() {
+  releaseBtn();
+};
+
+function releaseBtn(){
+  if(pressedBtn != -1 ){
+    sendCC(pressedBtn, 0);
+    document.querySelector(".active").classList.remove("active");
+    pressedBtn = -1;
+  }
+}
