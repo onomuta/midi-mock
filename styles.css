@@ -20,21 +20,38 @@ body{
   color:#666;
 }
 
-.main{
+/* #slider-box{
   margin:auto;
   display:table;
-}
+} */
 
 /* //////////////////// */
+
+#slider-box{
+  display:inline-block;
+  margin-top: 4px;
+}
+#note-box{
+  display:inline-block
+}
+
+.note-btn{
+  margin-left:20px;
+  width:80px;
+  background:#eee;
+  font-size: 11px;
+  text-align: center
+}
+
 .slide-container{
   display:table;
   table-layout:fixed;
   width:400px;
-  margin: 4px;
+  margin: 1px;
 }
 .label{
   display:table-cell;
-  width:50px;
+  width:40px;
   text-align: right;
   font-size: 11px;
 }
@@ -52,15 +69,19 @@ body{
 }
 
 
-.main .noUi-target{
+#slider-box .noUi-target{
   box-shadow:initial
 }
-.main .noUi-horizontal .noUi-handle{
+#slider-box .noUi-horizontal .noUi-handle{
   height:18px;
   top:-1px;
   box-shadow: initial;
 }
-.main .noUi-handle:before, .main .noUi-handle:after{
+#slider-box .noUi-handle:before, #slider-box .noUi-handle:after{
   top:4px;
   height:8px
+}
+
+.active, .noUi-connect {
+  background:#0cd
 }
